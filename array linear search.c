@@ -1,16 +1,19 @@
 #include<stdio.h>
 int main(){
-    int arr[5]={12,24,36,48,60};
     int element;
-    printf("ENTER THE NUMBER:");
+    int arr[5]={10,20,30,40,50};
+    printf("ENTER THE ELEMENT:");
     scanf("%d",&element);
-    for(int i=0;i<5;i++){
-        if(arr[i]==element){
-            printf("ELEMENT %d FOUND IN INDEX:%d",element,i);
-            break;
-        } else{
-            printf("NO INDEX FOUND !");
+    int found=0;
+    for(int i=1;i<5;i++){
+        if(element==arr[i]){
+            printf("found in %d",i);
+            found=1;
             break;
         }
+        }
+    if(found==0){
+        printf("ELEMENT NOT FOUND");
     }
+    return 0;
 }
