@@ -1,12 +1,14 @@
 #include<stdio.h>
-int main() {
-    char ch;
-    printf("Enter a alphabet:");
-    scanf("%c",&ch);
-    int val=(int)ch;
-     (val>32 && val<64)?
-        printf ("its a special character"):  (val>=65 && val<=91)?
-    
-        printf("its a Uppercase character"): printf("ita a Lowercase character");
-    
+int main(){
+    char alph;
+    printf("ENTER THE CHARACTER:");
+    scanf("%c",&alph);
+    if(alph>=65 && alph<=90){
+        printf("UPPERCASE");
+    }else if(alph>=97 && alph<=122){
+        printf("LOWER CASE");
+    }else{
+        printf("WRONG INPUT");
+    }
+    return 0;
 }
